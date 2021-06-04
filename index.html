@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona główna</title>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.php">
+          <img class="primary-logo" src="assets/img/logo-1.png" alt="logo1">
+          <img class="secondary-logo" src="assets/img/logo-2.png" alt="logo2">
+        </a>
+
+        <!-- Desktop Navbar -->
+        <span class="nav-toggler d-block d-xl-none close" onclick="openNav()">&#9776;</span>
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.php">Home</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="about.html">
+                <span class="dropdown-title">O nas</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="about.html">O nas</a>
+                <a class="dropdown-item" href="news_list.html">Lista aktualności</a>
+                <a class="dropdown-item" href="news_detail.html">Szczegóły aktualności</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="product_list.html">
+                <span class="dropdown-title">Produkty</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="product_list.html">Lista produktów</a>
+                <a class="dropdown-item" href="product_detail.html">Szczegóły produktu</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">
+                <span class="dropdown-title">Usługi</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="#">Usługi 1</a>
+                <a class="dropdown-item" href="#">Usługi 2</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="technology.html">Technologia</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="realize.html">Realizacje</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <span class="nav-link">
+                <span class="dropdown-title">
+                  <img src="assets/img/poland-flag.jpg" alt="poland flag">
+                </span>
+                <i class="fa fa-angle-down"></i>
+              </span>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">French</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /Desktop Navbar -->
+
+        <!-- Mobile Navbar -->
+        <div class="sidenav" id="mySidenav">
+          <span class="close-btn" onclick="closeNav()">&times;</span>
+          <a href="index.php">Home</a>
+
+          <button class="dropdown-btn">O nas<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="about.html">-<i class="hypen"></i>O nas</a>
+            <a class="dropdown-content" href="news_list.html">-<i class="hypen"></i>Lista aktualności</a>
+            <a class="dropdown-content" href="news_detail.html">-<i class="hypen"></i>Szczegóły aktualności</a>
+          </div>
+
+          <button class="dropdown-btn">Produkty<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="product_list.html">-<i class="hypen"></i>Lista produktów</a>
+            <a class="dropdown-content" href="product_detail.html">-<i class="hypen"></i>Szczegóły produktu</a>
+          </div>
+
+          <button class="dropdown-btn">Usługi<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>Usługi 1</a>
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>Usługi 2</a>
+          </div>
+
+          <a href="technology.html">Technologia</a>
+          <a href="realize.html">Realizacje</a>
+          <a href="contact.html">Kontakt</a>
+
+          <button class="dropdown-btn">Polish<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>English</a>
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>Spanish</a>
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>French</a>
+          </div>
+        </div>
+        <!-- /Mobile Navbar -->
+      </div>
+    </nav>
+    <!-- /Navbar -->
+
+    <!-- Header Carousel -->
+    <div class="header">
+      <div id="headerCarousel" class="carousel slide header-carousel" data-ride="carousel">
+        <a class="carousel-control-prev" href="#headerCarousel" data-slide="prev">
+          <i class="fa fa-angle-left d-md-block d-none header-carousel-control hover-shadow"></i>
+        </a>
+        <a class="carousel-control-next" href="#headerCarousel" data-slide="next">
+          <i class="fa fa-angle-right d-md-block d-none header-carousel-control hover-shadow"></i>
+        </a>
+
+        <div class="carousel-inner">
+          <div class="carousel-item header-carousel-item-1 active">
+            <div class="body-container">
+              <div class="d-flex flex-column-reverse flex-md-row text-center">
+                <div class="carousel-paragraph text-md-left">
+                  <h3 class="green-title">Nasza technologia to ekologia</h3>
+                  <h1 class="carousel-title">
+                    Technologia przyjazna<br>
+                    dzieciom i środowisku
+                  </h1>
+                  <p class="carousel-text">
+                    Pracujemy z aluminium, płytami HDPE i HPL, materiałami trwałymi i świetnie poddającymi się
+                    recyklingowi. Sprzęt, który ma służyć dzieciom, musi być bezpieczny pod każdym względem. To
+                    wyposażenie na pokolenia.
+                  </p>
+                  <a class="green-btn" href="#">
+                    Sprawdź naszą ofertę
+                    <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+                  </a>
+                </div>
+
+                <div class="carousel-img-wrapper text-center fade">
+                  <img class="carousel-img" src="assets/img/home/lantern.png" alt="lantern">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item header-carousel-item-2">
+            <div class="body-container">
+              <div class="d-flex flex-column-reverse flex-md-row">
+                <div class="carousel-paragraph text-center text-md-left">
+                  <h3 class="green-title">Nasza technologia to ekologia</h3>
+                  <h1 class="carousel-title">Technologia przyjazna<br> dzieciom i środowisku</h1>
+                  <p class="carousel-text">
+                    Pracujemy z aluminium, płytami HDPE i HPL, materiałami trwałymi i świetnie poddającymi się
+                    recyklingowi. Sprzęt, który ma służyć dzieciom, musi być bezpieczny pod każdym względem. To
+                    wyposażenie na pokolenia.
+                  </p>
+                  <a class="green-btn" href="#">
+                    Sprawdź naszą ofertę
+                    <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+                  </a>
+                </div>
+
+                <div class="carousel-img-wrapper text-center fade">
+                  <img class="carousel-img" src="assets/img/home/lantern.png" alt="lantern">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Header Carousel -->
+
+    <!-- Fixed Tag -->
+    <div class="fixed-tag hover-shadow">
+      <img src="assets/img/pdf-icon.jpg" alt="pdf icon">
+      <p class="fixed-tag-text">
+        Pobierz katalog
+      </p>
+    </div>
+    <!-- /Fixed Tag -->
+  </header>
+
+  <main>
+    <!-- Feature Section -->
+    <div class="feature-section text-center">
+      <div class="body-container">
+        <div class="row">
+          <div class="col-md-6 col-xl-3 feature-content">
+            <div class="feature-img-wrapper">
+              <img src="assets/img/home/feature-1.png" alt="feature1">
+            </div>
+            <h5 class="feature-title">Wieloletnie doświadczenie</h5>
+            <p class="feature-text">Przykładowy tekst opisujący daną cechę ipsum</p>
+          </div>
+
+          <div class="col-md-6 col-xl-3 feature-content">
+            <div class="feature-img-wrapper">
+              <img src="assets/img/home/feature-2.png" alt="feature2">
+            </div>
+            <h5 class="feature-title">Jakość potwierdzona certyfikatami</h5>
+            <p class="feature-text">Przykładowy tekst opisujący daną cechę ipsum</p>
+          </div>
+
+          <div class="col-md-6 col-xl-3 feature-content">
+            <div class="feature-img-wrapper">
+              <img src="assets/img/home/feature-3.png" alt="feature3">
+            </div>
+            <h5 class="feature-title">Indywidualne rozwiązania</h5>
+            <p class="feature-text">Przykładowy tekst opisujący daną cechę ipsum</p>
+          </div>
+
+          <div class="col-md-6 col-xl-3 feature-content">
+            <div class="feature-img-wrapper">
+              <img src="assets/img/home/feature-4.png" alt="feature4">
+            </div>
+            <h5 class="feature-title">Gwarancja jakości</h5>
+            <p class="feature-text">Przykładowy tekst opisujący daną cechę ipsum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Feature Section -->
+
+    <!-- Nasza Section -->
+    <div class="nasza-section text-center">
+      <div class="body-container">
+        <h2 class="section-title">Nasza oferta</h2>
+        <h3 class="section-text">Zapoznaj się z naszą ofertę i wybierz interesującą Cię kategorię</h3>
+
+        <div class="nasza-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="nasza-item hover-move-up">
+                <img class="nasza-item-img" src="assets/img/home/nasza-item-1.png" alt="nasza item">
+                <div class="nasza-item-text">
+                  <h3 class="nasza-item-primary-title">Zestawy zabawowe</h3>
+                  <p class="nasza-item-primary-text">Rozbudowane, aluminiowe zestawy atrakcji</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="nasza-item hover-move-up">
+                <img class="nasza-item-img" src="assets/img/home/nasza-item-2.png" alt="nasza item">
+                <div class="nasza-item-text">
+                  <h3 class="nasza-item-secondary-title">Urządzenia<br> tematyczne</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="nasza-item hover-move-up">
+                    <img class="nasza-item-img" src="assets/img/home/nasza-item-3.png" alt="nasza item">
+                    <div class="nasza-item-text">
+                      <h3 class="nasza-item-secondary-title">Urządzenia<br> sprawnościowe</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="nasza-item hover-move-up">
+                    <img class="nasza-item-img" src="assets/img/home/nasza-item-4.png" alt="nasza item">
+                    <div class="nasza-item-text">
+                      <h3 class="nasza-item-secondary-title">Nawierzchnie</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="nasza-item hover-move-up">
+                    <img class="nasza-item-img" src="assets/img/home/nasza-item-5.png" alt="nasza item">
+                    <div class="nasza-item-text">
+                      <h3 class="nasza-item-secondary-title">Linaria</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="nasza-item hover-move-up">
+                    <img class="nasza-item-img" src="assets/img/home/nasza-item-6.png" alt="nasza item">
+                    <div class="nasza-item-text">
+                      <h4 class="nasza-item-secondary-title">Bujaki</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="nasza-item hover-move-up">
+                <img class="nasza-item-img pl-4 pl-sm-0" src="assets/img/home/nasza-item-7.png" alt="nasza item">
+                <div class="nasza-item-text">
+                  <h3 class="nasza-item-secondary-title">Huśtawki</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="green-btn" href="#">
+          Sprawdź naszą ofertę
+          <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+        </a>
+      </div>
+    </div>
+    <!-- /Nasza Section -->
+
+    <!-- Girl Parallax -->
+    <div class="girl-parallax text-center">
+      <div class="body-container">
+        <img src="assets/img/home/dialog.png" alt="dialog">
+        <h2 class="parallax-title">Nic nie zastąpi rozmowy</h2>
+        <h3 class="girl-text">Nie ma pewniejszego sposobu na sprawdzenie potencjalnego wykonawcy niż rozmowa.</h3>
+        <a class="green-btn" href="#">
+          Poświęć nam tylko chwilę
+          <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+        </a>
+      </div>
+    </div>
+    <!-- /Girl Parallax -->
+
+    <!-- Production Section -->
+    <div class="production-section text-center">
+      <div class="body-container">
+        <h2 class="section-title">Nowości w naszej ofercie</h2>
+        <h3 class="section-text">Sprawdź najnowsze produkty w naszej ofercie.</h3>
+
+        <div class="production-carousel-wrapper">
+          <i class="production-carousel-next fa fa-angle-left d-md-block d-none body-carousel-control text-center"></i>
+          <i class="production-carousel-prev fa fa-angle-right d-md-block d-none body-carousel-control text-center"></i>
+
+          <div id="productionCarousel" class="owl-carousel production-carousel">
+            <div class="production-carousel-item hover-move-up">
+              <div class="production-card d-flex justify-content-center align-items-center">
+                <span class="production-label">NOWOśĆ</span>
+                <img class="production-img" src="assets/img/home/production-1.png" alt="production">
+              </div>
+              <h6 class="production-category">Urządzenia sprawnościowe</h6>
+              <h3 class="production-name">Przykładowa nazwa produktu</h3>
+            </div>
+
+            <div class="production-carousel-item hover-move-up">
+              <div class="production-card d-flex justify-content-center align-items-center">
+                <span class="production-label">NOWOśĆ</span>
+                <img class="production-img" src="assets/img/home/production-2.png" alt="production">
+              </div>
+              <h6 class="production-category">Urządzenia sprawnościowe</h6>
+              <h3 class="production-name">Siatka łańcuchowa mała</h3>
+            </div>
+
+            <div class="production-carousel-item hover-move-up">
+              <div class="production-card d-flex justify-content-center align-items-center">
+                <span class="production-label">NOWOśĆ</span>
+                <img class="production-img" src="assets/img/home/production-3.png" alt="production">
+              </div>
+              <h6 class="production-category">Urządzenia sprawnościowe</h6>
+              <h3 class="production-name">Przykładowa nazwa produktu</h3>
+            </div>
+
+            <div class="production-carousel-item hover-move-up">
+              <div class="production-card d-flex justify-content-center align-items-center">
+                <span class="production-label">NOWOśĆ</span>
+                <img class="production-img" src="assets/img/home/production-2.png" alt="production">
+              </div>
+              <h6 class="production-category">Urządzenia sprawnościowe</h6>
+              <h3 class="production-name">Siatka łańcuchowa mała</h3>
+            </div>
+
+            <div class="production-carousel-item hover-move-up">
+              <div class="production-card d-flex justify-content-center align-items-center">
+                <span class="production-label">NOWOśĆ</span>
+                <img class="production-img" src="assets/img/home/production-3.png" alt="production">
+              </div>
+              <h6 class="production-category">Urządzenia sprawnościowe</h6>
+              <h3 class="production-name">Przykładowa nazwa produktu</h3>
+            </div>
+
+            <div class="production-carousel-item hover-move-up">
+              <div class="production-card d-flex justify-content-center align-items-center">
+                <span class="production-label">NOWOśĆ</span>
+                <img class="production-img" src="assets/img/home/production-1.png" alt="production">
+              </div>
+              <h6 class="production-category">Urządzenia sprawnościowe</h6>
+              <h3 class="production-name">Przykładowa nazwa produktu</h3>
+            </div>
+          </div>
+        </div>
+
+        <a class="green-btn" href="#">
+          Zobacz więcej
+          <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+        </a>
+      </div>
+    </div>
+    <!-- /Production Section -->
+
+    <!-- Intro Section -->
+    <div class="intro-section text-center text-md-left">
+      <div class="d-flex flex-column flex-md-row text-center">
+        <div class="intro-img-wrapper">
+          <img class="intro-img" data-aos="fade-up" data-aos-duration="3000" src="assets/img/home/slider.png" alt="slider">
+        </div>
+
+        <div class="intro-paragraph text-md-left px-3 px-md-0">
+          <h2 class="section-title">Przykładowy nagłówek<br> do sekcji tekstowej</h2>
+          <h3 class="green-title">Projektujemy dobrą zabawę już 20 lat</h3>
+          <p class="intro-text intro-text-1">
+            Drewnogród to zespół, który zaprojektował i postawił tysiące udanych<br>
+            realizacji placów zabawna terenie całego kraju.
+          </p>
+
+          <p class="intro-text">
+            Wraz z nową marką Przykładowa Nazwa stworzoną na potrzeby rynku<br>
+            europejskiego oferujemy nowe, ekologiczne technologie oraz tę samą co<br>
+            zawsze u nas, niezmiennie wzorową jakość.
+          </p>
+
+          <a class="green-btn" href="#">
+            Sprawdź naszą ofertę
+            <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- /Introduction Section -->
+
+    <!-- News Section -->
+    <div class="news-section">
+      <div class="body-container">
+        <h2 class="section-title text-center">Aktualności</h2>
+        <div class="news-carousel-wrapper">
+          <i class="news-carousel-next fa fa-angle-left d-md-block d-none body-carousel-control text-center"></i>
+          <i class="news-carousel-prev fa fa-angle-right d-md-block d-none body-carousel-control text-center"></i>
+
+          <div id="newsCarousel" class="owl-carousel news-carousel">
+            <div class="news-carousel-item text-center text-md-left hover-move-up">
+              <img class="news-img" src="assets/img/home/news-1.jpg" alt="news">
+              <h6 class="news-date">
+                <img class="mr-2" src="assets/img/green-calendar.png" alt="calendar">
+                10 października 2020
+              </h6>
+              <h4 class="news-title">Przykładowa nazwa aktualności lub udostępnionego materiału</h4>
+              <p class="news-text">Przykładowy tekst, zajawka, szerzej opisująca zawartość wpisu. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="news-carousel-item text-center text-md-left hover-move-up">
+              <img class="news-img" src="assets/img/home/news-2.jpg" alt="news">
+              <h6 class="news-date">
+                <img class="mr-2" src="assets/img/green-calendar.png" alt="calendar">
+                10 października 2020
+              </h6>
+              <h4 class="news-title">Przykładowa nazwa aktualności lub udostępnionego materiału</h4>
+              <p class="news-text">Przykładowy tekst, zajawka, szerzej opisująca zawartość wpisu. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="news-carousel-item text-center text-md-left hover-move-up">
+              <img class="news-img" src="assets/img/home/news-3.jpg" alt="news">
+              <h6 class="news-date">
+                <img class="mr-2" src="assets/img/green-calendar.png" alt="calendar">
+                10 października 2020
+              </h6>
+              <h4 class="news-title">Przykładowa nazwa aktualności lub udostępnionego materiału</h4>
+              <p class="news-text">Przykładowy tekst, zajawka, szerzej opisująca zawartość wpisu. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="news-carousel-item text-center text-md-left hover-move-up">
+              <img class="news-img" src="assets/img/home/news-2.jpg" alt="news">
+              <h6 class="news-date">
+                <img class="mr-2" src="assets/img/green-calendar.png" alt="calendar">
+                10 października 2020
+              </h6>
+              <h4 class="news-title">Przykładowa nazwa aktualności lub udostępnionego materiału</h4>
+              <p class="news-text">Przykładowy tekst, zajawka, szerzej opisująca zawartość wpisu. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="news-carousel-item text-center text-md-left hover-move-up">
+              <img class="news-img" src="assets/img/home/news-3.jpg" alt="news">
+              <h6 class="news-date">
+                <img class="mr-2" src="assets/img/green-calendar.png" alt="calendar">
+                10 października 2020
+              </h6>
+              <h4 class="news-title">Przykładowa nazwa aktualności lub udostępnionego materiału</h4>
+              <p class="news-text">Przykładowy tekst, zajawka, szerzej opisująca zawartość wpisu. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="news-carousel-item text-center text-md-left hover-move-up">
+              <img class="news-img" src="assets/img/home/news-1.jpg" alt="news">
+              <h6 class="news-date">
+                <img class="mr-2" src="assets/img/green-calendar.png" alt="calendar">
+                10 października 2020
+              </h6>
+              <h4 class="news-title">Przykładowa nazwa aktualności lub udostępnionego materiału</h4>
+              <p class="news-text">Przykładowy tekst, zajawka, szerzej opisująca zawartość wpisu. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /News Section -->
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <div class="body-container">
+        <div class="row">
+          <div class="col-xl-4 text-center text-md-left">
+            <h2 class="footer-title text-center text-md-left">Chętnie pomożemy!</h2>
+            <p class="footer-text text-center text-md-left">Jesteśmy do Państwa dyspozycji<br class="d-block d-lg-none">
+              pn-pt w godz. 8:00 - 16:00
+            </p>
+
+            <div class="phone text-left">
+              <img src="assets/img/phone.png" alt="phone">
+              <span class="phone-number">(041) 306-33-33</span>
+            </div>
+
+            <div class="email text-left">
+              <img src="assets/img/mail.png" alt="mail">
+              <span class="phone-number">info@sampledomain.pl</span>
+            </div>
+
+            <a class="green-btn mb-4" href="#">
+              Napisz do nas
+              <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+            </a>
+          </div>
+
+          <div class="col-xl-8">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-4 info-links">
+                    <h6 class="footer-link-title">Informacje</h6>
+                    <a href="#" class="footer-link">O nas</a>
+                    <a href="#" class="footer-link">Gwarancja</a>
+                    <a href="#" class="footer-link">Certyfikaty</a>
+                    <a href="#" class="footer-link">Polityka prywatności</a>
+                    <a href="#" class="footer-link">Regulamin</a>
+                    <a href="#" class="footer-link">Kontakt</a>
+                  </div>
+
+                  <div class="col-4 product-links-1">
+                    <h6 class="footer-link-title">Produkty</h6>
+                    <a href="#" class="footer-link">Zestawy zabawowe</a>
+                    <a href="#" class="footer-link">Urządzenia tematyczne</a>
+                    <a href="#" class="footer-link">Urządzenia sprawnościowe</a>
+                    <a href="#" class="footer-link">Urządzenia integracyjne</a>
+                    <a href="#" class="footer-link">Huśtawki</a>
+                    <a href="#" class="footer-link">Bujaki</a>
+                    <a href="#" class="footer-link">Piaskownice</a>
+                  </div>
+
+                  <div class="col-4 product-links-2">
+                    <h6 class="footer-link-title text-dark">.</h6>
+                    <a href="#" class="footer-link">Linaria</a>
+                    <a href="#" class="footer-link">Karuzele</a>
+                    <a href="#" class="footer-link">Street Workut</a>
+                    <a href="#" class="footer-link">Panele edukacyjne</a>
+                    <a href="#" class="footer-link">Mała architektura</a>
+                    <a href="#" class="footer-link">Nawierzchnie</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 lang-panel">
+                <div class="lang-dropdown d-flex align-items-center">
+                  <img src="assets/img/poland-flag.jpg" alt="poland flag">
+                  <span class="lang-text mr-auto">Polska</span>
+                  <i class="fa fa-angle-down"></i>
+
+                  <div class="lang-dropdown-menu mt-n1 border-0 shadow">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">French</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar text-center text-md-left">
+      <div class="body-container d-md-flex justify-content-between align-items-center">
+        <p class="bottom-text mb-4 mb-md-0">
+          © 2020 Przykładowa Nazwa. All rights reserved.<br>
+          Projekt i wykonanie: ALFA BRAVO
+        </p>
+        <div class="social-links">
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/facebook-icon.png" alt="facebook icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/twitter-icon.png" alt="twitter icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/linkedin-icon.png" alt="linkedin icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/youtube-icon.png" alt="youtube icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/instagram-icon.png" alt="instagram icon">
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+  <!-- AOS Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- My JavaScript -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

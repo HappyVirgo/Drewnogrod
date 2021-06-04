@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Light Gallery -->
+  <link type="text/css" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.php">
+          <img class="primary-logo" src="assets/img/logo-1.png" alt="logo1">
+          <img class="secondary-logo" src="assets/img/logo-2.png" alt="logo2">
+        </a>
+
+        <!-- Desktop Navbar -->
+        <span class="nav-toggler d-block d-xl-none close" onclick="openNav()">&#9776;</span>
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="about.html">
+                <span class="dropdown-title">O nas</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="about.html">O nas</a>
+                <a class="dropdown-item" href="news_list.html">Lista aktualności</a>
+                <a class="dropdown-item" href="news_detail.html">Szczegóły aktualności</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="product_list.html">
+                <span class="dropdown-title">Produkty</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="product_list.html">Lista produktów</a>
+                <a class="dropdown-item" href="product_detail.html">Szczegóły produktu</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">
+                <span class="dropdown-title">Usługi</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="#">Usługi 1</a>
+                <a class="dropdown-item" href="#">Usługi 2</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="technology.html">Technologia</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="realize.html">Realizacje</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+              <div class="nav-hover-line"></div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <span class="nav-link">
+                <span class="dropdown-title">
+                  <img src="assets/img/poland-flag.jpg" alt="poland flag">
+                </span>
+                <i class="fa fa-angle-down"></i>
+              </span>
+              <div class="nav-hover-line"></div>
+              <div class="dropdown-menu mt-n1 border-0 shadow">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">French</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /Desktop Navbar -->
+
+        <!-- Mobile Navbar -->
+        <div class="sidenav" id="mySidenav">
+          <span class="close-btn" onclick="closeNav()">&times;</span>
+          <a href="index.php">Home</a>
+
+          <button class="dropdown-btn">O nas<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="about.html">-<i class="hypen"></i>O nas</a>
+            <a class="dropdown-content" href="news_list.html">-<i class="hypen"></i>Lista aktualności</a>
+            <a class="dropdown-content" href="news_detail.html">-<i class="hypen"></i>Szczegóły aktualności</a>
+          </div>
+
+          <button class="dropdown-btn">Produkty<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="product_list.html">-<i class="hypen"></i>Lista produktów</a>
+            <a class="dropdown-content" href="product_detail.html">-<i class="hypen"></i>Szczegóły produktu</a>
+          </div>
+
+          <button class="dropdown-btn">Usługi<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>Usługi 1</a>
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>Usługi 2</a>
+          </div>
+
+          <a href="technology.html">Technologia</a>
+          <a href="realize.html">Realizacje</a>
+          <a href="contact.html">Kontakt</a>
+
+          <button class="dropdown-btn">Polish<i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-container">
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>English</a>
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>Spanish</a>
+            <a class="dropdown-content" href="#">-<i class="hypen"></i>French</a>
+          </div>
+        </div>
+        <!-- /Mobile Navbar -->
+      </div>
+    </nav>
+    <!-- /Navbar -->
+
+    <!-- Header -->
+    <div class="header">
+      <img class="header-back" src="assets/img/about/header-back.jpg" alt="header">
+      <div class="body-container">
+        <div class="bread-crumb">
+          <span class="bread-crumb-item">Strona główna</span>
+          <span class="bread-crumb-dash">—</span>
+          <span class="bread-crumb-item">Nazwa podstrony</span>
+          <span class="bread-crumb-dash">—</span>
+          <span class="bread-crumb-item active">Przykładowa nazwa podstrony</span>
+        </div>
+        <h2 class="section-title">Kontakt</h2>
+      </div>
+    </div>
+    <!-- /Header -->
+
+    <!-- Fixed Tag -->
+    <div class="fixed-tag hover-shadow">
+      <img src="assets/img/pdf-icon.jpg" alt="pdf icon">
+      <p class="fixed-tag-text">Pobierz katalog</p>
+    </div>
+    <!-- /Fixed Tag -->
+  </header>
+
+  <main>
+    <!-- Info Section -->
+    <div class="info-section">
+      <div class="body-container">
+        <p class="text-center">
+          Kontakt z klientami jest dla nas bardzo ważny. Atlanso to nie tylko obliczenia i konstrukcje, ale też
+          atmosfera pełnej współpracy.<br class="d-none d-md-block">
+          Pierwszy krok należy do klienta. Potem zajmiemy się wszystkim.
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 col-xl-3 contact-item">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/contact/contact-1.png" alt="contact">
+              <div class="contact-title">Adres</div>
+            </div>
+
+            <p class="contact-detail">
+              <b>P.P.H.U. Drewnogród Robert Lis</b><br>
+              Podzamcze<br>
+              ul. Źródlana 14<br>
+              26-065 Piekoszów
+            </p>
+          </div>
+
+          <div class="col-md-6 col-xl-3 contact-item">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/contact/contact-2.png" alt="contact">
+              <div class="contact-title">Dane kontaktowe</div>
+            </div>
+
+            <p class="contact-detail">
+              <b>tel.</b> (041) 306-33-33<br>
+              <b>tel/fax</b> (041) 306-24-92<br>
+              <b>kom.</b> 504-064-520<br>
+              <b>e-mail:</b> info@drewnogrod.pl
+            </p>
+          </div>
+
+          <div class="col-md-6 col-xl-3 contact-item">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/contact/contact-3.png" alt="contact">
+              <div class="contact-title">Godziny otwarcia</div>
+            </div>
+
+            <p class="contact-detail">
+              Poniedziałek - Piątek 0:00 - 0:00<br>
+              Sobota 0:00 - 0:00<br>
+              Niedziela <span class="grey-text">- nieczynne</span>
+            </p>
+          </div>
+
+          <div class="col-md-6 col-xl-3 contact-item">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/contact/contact-4.png" alt="contact">
+              <div class="contact-title">Informacje</div>
+            </div>
+
+            <p class="contact-detail">
+              <b>NIP:</b> 0000000000<br>
+              <b>REGON:</b> 0000000000<br>
+              <b>Numer konta:</b> 0000 0000 0000 0000 00
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Info Section -->
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <div class="contact-card hover-shadow">
+        <form action="" class="needs-validation">
+          <h3 class="form-title">Formularz kontaktowy</h3>
+
+          <div class="form-group">
+            <label class="form-label" for="name">Numer telefonu:</label>
+            <input type="text" class="form-control input-box" placeholder="" id="name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Adres e-mail:</label>
+            <input type="email" class="form-control input-box" placeholder="" id="email" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Treść wiadomości:</label>
+            <textarea class="form-control" cols="30" rows="4" placeholder="" id="message" required></textarea>
+          </div>
+
+          <div class="form-group form-check">
+            <label class="form-label" class="form-check-label">
+              <input class="form-check-input" type="checkbox" required>
+              <p class="check-detail">
+                Chcę otrzymać na mój adres e-mail odpowiedź od PEŁNA NAZWA FIRMY na zadane w formularzu pytanie.
+                Informacje o przetwarzaniu danych osobowych przez Administratora znajdują się tutaj.
+              </p>
+            </label>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button class="green-btn" type="submit">
+              Wyślij wiadomość
+              <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="googleMap"></div>
+    </div>
+    <!-- /Map Section -->
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <div class="body-container">
+        <div class="row">
+          <div class="col-xl-4 text-center text-md-left">
+            <h2 class="footer-title text-center text-md-left">Chętnie pomożemy!</h2>
+            <p class="footer-text text-center text-md-left">Jesteśmy do Państwa dyspozycji<br class="d-block d-lg-none">
+              pn-pt w godz. 8:00 - 16:00
+            </p>
+
+            <div class="phone text-left">
+              <img src="assets/img/phone.png" alt="phone">
+              <span class="phone-number">(041) 306-33-33</span>
+            </div>
+
+            <div class="email text-left">
+              <img src="assets/img/mail.png" alt="mail">
+              <span class="phone-number">info@sampledomain.pl</span>
+            </div>
+
+            <a class="green-btn mb-4" href="#">
+              Napisz do nas
+              <img class="ml-1 ml-md-3" src="assets/img/right-arrow.png" alt="rigth arrow">
+            </a>
+          </div>
+
+          <div class="col-xl-8">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-4 info-links">
+                    <h6 class="footer-link-title">Informacje</h6>
+                    <a href="#" class="footer-link">O nas</a>
+                    <a href="#" class="footer-link">Gwarancja</a>
+                    <a href="#" class="footer-link">Certyfikaty</a>
+                    <a href="#" class="footer-link">Polityka prywatności</a>
+                    <a href="#" class="footer-link">Regulamin</a>
+                    <a href="#" class="footer-link">Kontakt</a>
+                  </div>
+
+                  <div class="col-4 product-links-1">
+                    <h6 class="footer-link-title">Produkty</h6>
+                    <a href="#" class="footer-link">Zestawy zabawowe</a>
+                    <a href="#" class="footer-link">Urządzenia tematyczne</a>
+                    <a href="#" class="footer-link">Urządzenia sprawnościowe</a>
+                    <a href="#" class="footer-link">Urządzenia integracyjne</a>
+                    <a href="#" class="footer-link">Huśtawki</a>
+                    <a href="#" class="footer-link">Bujaki</a>
+                    <a href="#" class="footer-link">Piaskownice</a>
+                  </div>
+
+                  <div class="col-4 product-links-2">
+                    <h6 class="footer-link-title text-dark">.</h6>
+                    <a href="#" class="footer-link">Linaria</a>
+                    <a href="#" class="footer-link">Karuzele</a>
+                    <a href="#" class="footer-link">Street Workut</a>
+                    <a href="#" class="footer-link">Panele edukacyjne</a>
+                    <a href="#" class="footer-link">Mała architektura</a>
+                    <a href="#" class="footer-link">Nawierzchnie</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 lang-panel">
+                <div class="lang-dropdown d-flex align-items-center">
+                  <img src="assets/img/poland-flag.jpg" alt="poland flag">
+                  <span class="lang-text mr-auto">Polska</span>
+                  <i class="fa fa-angle-down"></i>
+
+                  <div class="lang-dropdown-menu mt-n1 border-0 shadow">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">French</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar text-center text-md-left">
+      <div class="body-container d-md-flex justify-content-between align-items-center">
+        <p class="bottom-text mb-4 mb-md-0">
+          © 2020 Przykładowa Nazwa. All rights reserved.<br>
+          Projekt i wykonanie: ALFA BRAVO
+        </p>
+        <div class="social-links">
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/facebook-icon.png" alt="facebook icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/twitter-icon.png" alt="twitter icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/linkedin-icon.png" alt="linkedin icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/youtube-icon.png" alt="youtube icon">
+          </span>
+          <span class="social-link">
+            <img class="hover-border-show" src="assets/img/instagram-icon.png" alt="instagram icon">
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+  <!-- AOS Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Light Gallery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js"></script>
+
+  <!-- My JavaScript -->
+  <script src="assets/js/script.js"></script>
+
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBsiA5UGQuYRYeeU0ewuC_jXC_EAuvGX0&callback=myMap">
+  </script>
+
+</body>
+
+</html>
